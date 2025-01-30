@@ -37,6 +37,19 @@
     src: server.xml.j2
     dest: "{{ atl_product_installation_versioned }}/conf/server.xml"
 
+## edited by bmeers sept 2020.
+#  Removed by prapillai - https://jira.tools.deloitteinnovation.us/browse/CON-1082
+# - name: Create web.xml
+#   template:
+#     src: web.xml.j2
+#     dest: "{{ atl_product_installation_versioned }}/confluence/WEB-INF/web.xml"
+
+# Removed by prapillai - https://jira.tools.deloitteinnovation.us/browse/CON-1082
+# - name: Create log4j.properties
+#   template:
+#     src: log4j.properties.j2
+#     dest: "{{ atl_product_installation_versioned }}/confluence/WEB-INF/classes/log4j.properties"
+
 - name: Override JVM memory settings.
   replace:
     path: "{{ atl_product_installation_versioned }}/bin/setenv.sh"

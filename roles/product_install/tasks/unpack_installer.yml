@@ -17,4 +17,6 @@
   args:
     creates: "{{ atl_product_installation_versioned }}/.install4j/"
   become: true
-  become_user: "{{ atl_product_user }}"
+  #become_user: "{{ atl_product_user }}"
+  #become_method: sudo
+  become_user: root

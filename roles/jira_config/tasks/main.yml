@@ -1,10 +1,5 @@
 ---
 
-- name: Create web.xml
-  template:
-    src: web.xml.j2
-    dest: "{{ atl_product_installation_versioned }}/atlassian-jira/WEB-INF/web.xml"
-    owner: "{{ atl_product_user }}"
 
 - name: Create database config
   template:
@@ -22,11 +17,6 @@
   template:
     src: server.xml.j2
     dest: "{{ atl_product_installation_versioned }}/conf/server.xml"
-
-- name: Create seraph-config.xml config
-  template:
-    src: seraph-config.xml.j2
-    dest: "{{ atl_product_installation_versioned }}/atlassian-jira/WEB-INF/classes/seraph-config.xml"
 
 - name: Check for a jira-config.properties in the shared home
   stat:

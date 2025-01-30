@@ -30,6 +30,7 @@ atl_catalina_opts_extra: >-
   -XX:+PrintAdaptiveSizePolicy
   -XX:+PrintGCDetails
   -XX:+PrintTenuringDistribution
+  -Dupm.plugin.upload.enabled=true
   -Dsynchrony.proxy.enabled=false
   -Dconfluence.cluster.node.name={{ atl_local_ipv4 }}
   -Dconfluence.cluster.hazelcast.max.no.heartbeat.seconds=60

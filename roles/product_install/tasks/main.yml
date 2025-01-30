@@ -270,3 +270,9 @@
   when:
     - atl_install_jsd_as_obr is defined
     - atl_install_jsd_as_obr
+    
+- name: Replace confluence1
+  replace:
+    path: /opt/atlassian/confluence/current/bin/user.sh
+    regexp: 'CONF_USER="confluence1" # user created by installer'
+    replace: 'CONF_USER="confluence" # user created by installer'
